@@ -19,4 +19,9 @@ Heimdall aims to work out of the box for most common uses. but it'll be fully co
 The first milestone is setting up a framework for the different components to interact through.
 Then it'll be easy enough for users to contribute their own rate-limiting algorithms, and actions.
 
+## Design Decisions
+At first I thought Rust would be a great language for the project because it's so fast.
+However, I didn't realise that Rust generics are complciated, as you can't store objects of potentially different sizes on the stack,
+so you have to use Box to create a reference to memory on the heap, which ends up being very verbose and complicated. Instead, I'll choose Go because the memory model is simpler, and generics are easier to deal with, which is important given the plugin architecture of the project. Also, Go concurrency is much easier to work with.
+
 
