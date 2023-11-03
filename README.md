@@ -24,4 +24,13 @@ At first I thought Rust would be a great language for the project because it's s
 However, I didn't realise that Rust generics are complciated, as you can't store objects of potentially different sizes on the stack,
 so you have to use Box to create a reference to memory on the heap, which ends up being very verbose and complicated. Instead, I'll choose Go because the memory model is simpler, and generics are easier to deal with, which is important given the plugin architecture of the project. Also, Go concurrency is much easier to work with.
 
+## Development Practices
+### Contributing Changes
+1. Fork the repository.
+1. Create branch from develop with a name describing the feature/fix you want to contribute.
+1. Make changes on branch.
+1. Pull and merge develop into new branch, and resolve conflicts.
+1. Push new branch to your remote forked repo.
+1. Create PR to merge your new branch into develop in the original repository.
+
 
